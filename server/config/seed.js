@@ -4,13 +4,13 @@
  */
 
 'use strict';
-import Thing from '../api/thing/thing.model';
+
 import User from '../api/user/user.model';
 import config from './environment/';
 
 export default function seedDatabaseIfNeeded() {
   if(config.seedDB) {
-    Thing.find({}).remove()
+ /*   Thing.find({}).remove()
       .then(() => {
         Thing.create({
           name: 'Development Tools',
@@ -43,7 +43,7 @@ export default function seedDatabaseIfNeeded() {
       })
     .then(() => console.log('finished populating things'))
     .catch(err => console.log('error populating things', err));
-
+*/
     User.find({}).remove()
       .then(() => {
         User.create({
